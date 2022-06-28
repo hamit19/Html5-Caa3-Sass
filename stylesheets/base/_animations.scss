@@ -1,0 +1,170 @@
+@keyframes typewriting {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes typewriting-cursor {
+  0% {
+    border-left-color: transparent;
+  }
+  50% {
+    border-left-color: $color-blue1;
+  }
+}
+
+@keyframes rocket-moving {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+}
+
+@keyframes background-color {
+  from {
+    background-color: $color-blue2;
+  }
+  to {
+    background-color: $color-orange2;
+  }
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes stroke-dashoffset {
+  to {
+    opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes success-scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes plane-flying {
+  20% {
+    transform: scale(0.8) rotate3d(0, 0, 1, -60deg);
+    opacity: 0.8;
+  }
+  40% {
+    transform: scale(0.7) rotate(1, 1, 1, -80deg);
+  }
+  60% {
+    transform: scale(0.5) rotate3d(1, 1, 1, -90deg);
+  }
+  100% {
+    top: 0;
+    right: 1rem;
+    transform: scale(0) rotate3d(1, 1, 1, -110deg);
+  }
+}
+
+@keyframes clouds-move-right-to-left {
+  from {
+    transform: translateX(5%);
+  }
+  to {
+    transform: translateX(-5%);
+  }
+}
+
+@keyframes rocket-launch {
+  to {
+    top: 4.3rem;
+    right: 8rem;
+    transform: rotate(-78deg);
+  }
+}
+
+@keyframes rocket-transfer {
+  0% {
+    top: 4.3rem;
+    right: 8rem;
+    transform: rotate(-78deg);
+  }
+  33% {
+    transform: rotate(-78deg);
+  }
+  66% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    right: 18rem;
+    transform: rotate(-20deg);
+  }
+}
+
+@keyframes clouds-to-bottom {
+  from {
+    transform: translateY(-94%);
+  }
+  to {
+    transform: translateY(83%);
+  }
+}
+
+@keyframes paper-plane-out {
+  25% {
+    top: 6rem;
+    left: 16rem;
+    transform: rotateZ(-80deg);
+  }
+  100% {
+    top: -1rem;
+    left: -3rem;
+    transform: rotateZ(-100deg);
+  }
+}
+
+@keyframes video-stroke {
+  0% {
+    stroke-dasharray: 0;
+  }
+  100% {
+    stroke-dasharray: 9;
+  }
+}
+
+@keyframes paly-waves {
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes accordion-icon-move-in {
+  from {
+    top: -100px;
+  }
+  to {
+    top: 0;
+  }
+}
+@keyframes accordion-icon-move-out {
+  from {
+    top: 0;
+  }
+  to {
+    top: 100px;
+  }
+}

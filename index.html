@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>برنامه نویسی</title>
+  </head>
+  <body>
+    <!-- Navbar Section Start -->
+    <div class="navbar">
+      <div
+        class="container flex align-center justify-content-between p-b10 p-t10"
+      >
+        <div class="navbar__search-box">
+          <div class="search">
+            <form class="search__form" action="#" onsubmit="return false;">
+              <input
+                type="search"
+                class="search__input"
+                placeholder="جستجو کنید..."
+              />
+              <button class="search__button">
+                <span class="search__circle"></span>
+                <span class="search__stand"></span>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="navbar__nav">
+          <input
+            type="checkbox"
+            class="nav__burger-checkbox"
+            id="humberger-menu"
+          />
+          <label class="nav__burger-label" for="humberger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+          <div class="nav__mobile-wrap">
+            <ul class="nav__lists">
+              <li class="nav__list">
+                <a href="/" class="nav__link">خانه</a>
+              </li>
+
+              <li class="nav__list">
+                <a href="/" class="nav__link"
+                  >دوره ها <span class="nav__arrow"></span
+                ></a>
+
+                <ul class="nav__submenu1">
+                  <li class="nav__list">
+                    <a href="/">
+                      <i class="fas fa-globe-asia"></i> تور و گردشگری
+                    </a>
+                  </li>
+                  <li class="nav__list">
+                    <a href="/">
+                      <i class="fas fa-user-graduate"></i> آموزش آنلاین</a
+                    >
+                  </li>
+                  <li class="nav__list sublist1">
+                    <a href="/">
+                      <i class="fas fa-list"></i> سایر
+                      <i class="fas fa-angle-left"></i
+                    ></a>
+                    <ul class="nav__submenu2">
+                      <li class="nav__list">
+                        <a href="/">
+                          <i class="fas fa-credit-card"></i> فروشگاه اینترنتی</a
+                        >
+                      </li>
+                      <li class="nav__list">
+                        <a href="/">
+                          <i class="fas fa-hotel"></i> بلیط هواپیما</a
+                        >
+                      </li>
+                      <li class="nav__list">
+                        <a href="/"> <i class="fas fa-car"></i> اجاره خودرو</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav__list mega__menu">
+                <a href="/" class="nav__link"
+                  >مدرسین <span class="nav__arrow"></span
+                ></a>
+                <div class="mega__menu-content">
+                  <div class="mega__menu-colum">
+                    <img src="./images/mega-menu-bg.png" alt="mega-menu-logo" />
+                    <a href="/" class="btn btn__swipe">
+                      <span>سه روز تا پایان تخفیف</span>
+                    </a>
+                  </div>
+
+                  <div class="mega__menu-colum">
+                    <h4>تمامی دوره ها</h4>
+                    <ul class="mega__menu-lists">
+                      <li>
+                        <a href="/">
+                          <i class="fas fa-globe-asia"></i> دوره های پیشرفته
+                          css</a
+                        >
+                      </li>
+                      <li>
+                        <a href="/">
+                          <i class="fas fa-globe-asia"></i> دوره های پیشرفته
+                          css</a
+                        >
+                      </li>
+                      <li>
+                        <a href="/"
+                          ><i class="fas fa-globe-asia"></i> دوره های پیشرفته
+                          css</a
+                        >
+                      </li>
+                      <li>
+                        <a href="/"
+                          ><i class="fas fa-globe-asia"></i> دوره های پیشرفته
+                          css</a
+                        >
+                      </li>
+                      <li>
+                        <a href="/"
+                          ><i class="fas fa-globe-asia"></i> دوره های پیشرفته
+                          css</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="mega__menu-colum">
+                    <h4>ویدیو های پر بازدید</h4>
+                    <ul class="mega__menu-lists">
+                      <li>
+                        <a href="/">
+                          <i class="fas fa-user-graduate"></i> دوره های پیشرفته
+                          css</a
+                        >
+                      </li>
+                      <li>
+                        <a href="/">
+                          <i class="fas fa-user-graduate"></i> دوره های پیشرفته
+                          css</a
+                        >
+                      </li>
+                      <li>
+                        <a href="/"
+                          ><i class="fas fa-user-graduate"></i> دوره های پیشرفته
+                          css</a
+                        >
+                      </li>
+                      <li>
+                        <a href="/"
+                          ><i class="fas fa-user-graduate"></i> دوره های پیشرفته
+                          css</a
+                        >
+                      </li>
+                      <li>
+                        <a href="/"
+                          ><i class="fas fa-user-graduate"></i> دوره های پیشرفته
+                          css</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="nav__list">
+                <a href="/" class="nav__link">درباره ما</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="navbar__logo">
+          <a href="/">
+            <img
+              class="hidden show-large"
+              src="./images/logo-header.png"
+              alt="Logo Large"
+            />
+            <img
+              class="hidden show-small"
+              src="./images/logo-header-small.png"
+              alt="Logo Large"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Navbar Section End -->
+
+    <!-- Header Section Start -->
+    <header class="header">
+      <div class="header__banner container">
+        <div class="header-cta">
+          <div class="header__intro-wrap">
+            <h1 class="header-intro">آموزش پیشرفته css</h1>
+          </div>
+          <h2 class="header-subtitle">
+            css پیشرفته, با پروژه طراحی قالب آموزش آنلاین
+          </h2>
+          <h2 class="header-subtitle">آموزش برنامه نویسی با حمید حسنی</h2>
+          <a href="#" class="btn btn__swipe"> <span>ورود به دوره ها</span> </a>
+        </div>
+        <div class="header__rocket-bg">
+          <div class="header__rocket"></div>
+        </div>
+      </div>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- features section start -->
+    <div class="features container">
+      <div class="features__box">
+        <div class="features__text">
+          <object data="./images/laptop.svg" type="image/svg+xml"></object>
+
+          <h3>سریع تر از همیشه آموزش ببیین</h3>
+          <p>
+            یه متن آزمایشی و بی معنی در صنعت چاپ صفحه آرایی و طراحی گرافیک گفته
+            میشود. طرح گرافیک از این
+          </p>
+        </div>
+      </div>
+      <div class="features__box">
+        <div class="features__text">
+          <svg class="success-icon">
+            <use href="./images/sprite.svg#success"></use>
+          </svg>
+
+          <h3>آموزش از اساتید مجرب</h3>
+          <p>
+            یه متن آزمایشی و بی معنی در صنعت چاپ صفحه آرایی و طراحی گرافیک گفته
+            میشود. طرح گرافیک از این
+          </p>
+        </div>
+      </div>
+      <div class="features__box">
+        <div class="features__text">
+          <svg
+            class="world-icon"
+            width="64"
+            height="64"
+            viewBox="0 0 64 64"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-labelledby="title"
+            aria-describedby="desc"
+          >
+            <path
+              class="world-icon__world-map"
+              stroke-miterlimit="10"
+              d="M53.9 28.4A26 26 0 1 1 41 13m-2.1-1c-5.8 2.8-9.9 3.1-9.9 6.7s5.2 1.5 5.2 5.2-4 6.3-6.9 4.4-6.9-3-10.4 1.8-1.2 10.4 1.3 10.3 4.8-2.4 5.9.6 1.3 3 2.4 3.6 1.2 1.9.8 3.6 1.8 6.9 3.5 6.9 3.3-.7 3.5-3.5 2.3-2.9 3.3-3.7-.7-3.7 1.1-5.6 5.7-5.4 2.5-6.3-3-1.5-3.5-2.9-1.8-2.8.9-2.9a10.3 10.3 0 0 0 7.4-3.1l.7-.7"
+              data-name="layer2"
+            />
+            <path
+              class="world-icon__world-marker"
+              stroke-miterlimit="10"
+              d="M51 2a10 10 0 0 0-10 10c0 9 10 20 10 20s10-11 10-20A10 10 0 0 0 51 2z"
+              data-name="layer1"
+            />
+            <circle
+              class="world-icon__world-circle"
+              stroke-miterlimit="10"
+              r="2"
+              cy="12"
+              cx="51"
+              data-name="layer1"
+            />
+          </svg>
+          <h3>به راحتی از هرجایی آموزش ببین</h3>
+          <p>
+            یه متن آزمایشی و بی معنی در صنعت چاپ صفحه آرایی و طراحی گرافیک گفته
+            میشود. طرح گرافیک از این
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- features section end -->
+
+    <!-- courses section start -->
+
+    <div class="courses m-t50 m-b50">
+      <h2 class="header-title">دوره های آموزشی</h2>
+      <div class="container">
+        <div class="course">
+          <div class="course__box">
+            <div class="course__ribbon">
+              <div class="course__ribbon-text">تخفیف ویژه</div>
+            </div>
+            <div class="course__header">
+              <img
+                src="./images/sass-bg.jpg"
+                alt="sass course"
+                class="course__img"
+              />
+              <a href="#" class="course__details-link">
+                <span>ورود به سرفصل ها</span>
+                <i class="fas fa-angle-left"></i>
+              </a>
+              <div class="course__social-media">
+                <a href="#">
+                  <i class="fas fa-bookmark"></i>
+                </a>
+                <a href="#">
+                  <i class="fas fa-paper-plane"></i>
+                </a>
+                <a href="#">
+                  <i class="fas fa-comment"></i>
+                </a>
+                <a href="#">
+                  <i class="fas fa-heart"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="course__body">
+              <h3>آموزش پیشرفته sass</h3>
+              <div class="course__details">
+                <p>
+                  راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل
+                </p>
+                <span>
+                  <i class="fas fa-clock"></i>
+                  <span> زمان :۱۰ ساعت </span>
+                </span>
+                <span>
+                  <i class="fas fa-eye"></i>
+                  <span>۱۵۰۰ مشاهده</span>
+                </span>
+              </div>
+              <ul class="course__tags">
+                <li class="course__tag course__tag--blue">
+                  <a href="#">آموزش sass</a>
+                </li>
+                <li class="course__tag course__tag--green">
+                  <a href="#"> آموزش برنامه نویسی </a>
+                </li>
+                <li class="course__tag course__tag--orange">
+                  <a href="#"> متحرک سازی </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="course__footer">
+              <div class="course__price"><span>۶۰۰.۰۰۰ تومان</span></div>
+              <div class="course__stars">
+                <i class="course__star fas fa-star"></i>
+                <i class="course__star fas fa-star"></i>
+                <i class="course__star fas fa-star"></i>
+                <i class="course__star fas fa-star"></i>
+                <i class="course__star fas fa-star"></i>
+                <div class="course__result">
+                  <i class="course__user fas fa-user"></i>
+                  <span>(۴.۸) ۲۰۰ </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="course__box">
+            <div class="course__ribbon">
+              <div class="course__ribbon-text">تخفیف ویژه</div>
+            </div>
+            <div class="course__header">
+              <img
+                src="./images/css3-bg.jpg"
+                alt="sass course"
+                class="course__img"
+              />
+              <a href="#" class="course__details-link">
+                <span>ورود به سرفصل ها</span>
+                <i class="fas fa-angle-left"></i>
+              </a>
+              <div class="course__social-media">
+                <a href="#">
+                  <i class="fas fa-bookmark"></i>
+                </a>
+                <a href="#">
+                  <i class="fas fa-paper-plane"></i>
+                </a>
+                <a href="#">
+                  <i class="fas fa-comment"></i>
+                </a>
+                <a href="#">
+                  <i class="fas fa-heart"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="course__body">
+              <h3>آموزش پیشرفته css</h3>
+              <div class="course__details">
+                <p>
+                  راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل
+                </p>
+                <span>
+                  <i class="fas fa-clock"></i>
+                  <span> زمان : ۱۰ ساعت </span>
+                </span>
+                <span>
+                  <i class="fas fa-eye"></i>
+                  <span>۱۵۰۰ مشاهده</span>
+                </span>
+              </div>
+              <ul class="course__tags">
+                <li class="course__tag course__tag--blue">
+                  <a href="#">آموزش sass</a>
+                </li>
+                <li class="course__tag course__tag--green">
+                  <a href="#"> آموزش برنامه نویسی </a>
+                </li>
+                <li class="course__tag course__tag--orange">
+                  <a href="#"> متحرک سازی </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="course__footer">
+              <div class="course__price"><span>۶۰۰.۰۰۰ تومان</span></div>
+
+              <div class="course__stars">
+                <i class="course__star fas fa-star"></i>
+                <i class="course__star fas fa-star"></i>
+                <i class="course__star fas fa-star"></i>
+                <i class="course__star fas fa-star"></i>
+                <i class="course__star fas fa-star"></i>
+                <div class="course__result">
+                  <i class="course__user fas fa-user"></i>
+                  <span>(۴.۸) ۲۰۰ </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="course__box">
+            <div class="course__ribbon">
+              <div class="course__ribbon-text">تخفیف ویژه</div>
+            </div>
+            <div class="course__header">
+              <img
+                src="./images/flex-bg.jpg"
+                alt="sass course"
+                class="course__img"
+              />
+              <a href="#" class="course__details-link">
+                <span>ورود به سرفصل ها</span>
+                <i class="fas fa-angle-left"></i>
+              </a>
+              <div class="course__social-media">
+                <a href="#">
+                  <i class="fas fa-bookmark"></i>
+                </a>
+                <a href="#">
+                  <i class="fas fa-paper-plane"></i>
+                </a>
+                <a href="#">
+                  <i class="fas fa-comment"></i>
+                </a>
+                <a href="#">
+                  <i class="fas fa-heart"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="course__body">
+              <h3>آموزش پیشرفته flex</h3>
+              <div class="course__details">
+                <p>
+                  راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل
+                </p>
+                <span>
+                  <i class="fas fa-clock"></i>
+                  <span> زمان : ۱۰ ساعت </span>
+                </span>
+                <span>
+                  <i class="fas fa-eye"></i>
+                  <span>۱۵۰۰ مشاهده</span>
+                </span>
+              </div>
+              <ul class="course__tags">
+                <li class="course__tag course__tag--blue">
+                  <a href="#">آموزش sass</a>
+                </li>
+                <li class="course__tag course__tag--green">
+                  <a href="#"> آموزش برنامه نویسی </a>
+                </li>
+                <li class="course__tag course__tag--orange">
+                  <a href="#"> متحرک سازی </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="course__footer">
+              <div class="course__price"><span>۶۰۰.۰۰۰ تومان</span></div>
+              <div class="course__stars">
+                <i class="course__star fas fa-star"></i>
+                <i class="course__star fas fa-star"></i>
+                <i class="course__star fas fa-star"></i>
+                <i class="course__star fas fa-star"></i>
+                <i class="course__star fas fa-star"></i>
+                <div class="course__result">
+                  <i class="course__user fas fa-user"></i>
+                  <span>(۴.۸) ۲۰۰ </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- courses section end -->
+
+    <!-- Planes section start -->
+
+    <div class="plans m-t50 m-b50">
+      <h3 class="header-title">تعرفه دروه های آموزشی</h3>
+      <div class="plans__background"></div>
+
+      <div class="plans__cards">
+        <div class="card">
+          <div class="card__header card__header--orange">
+            <div class="card__clouds card__clouds--plane">
+              <i class="fas fa-cloud"></i>
+              <i class="fas fa-cloud"></i>
+              <i class="fas fa-cloud"></i>
+            </div>
+          </div>
+          <div class="card__plan-box">
+            <h4 class="card__plan-title">اشتراک ماهیانه</h4>
+          </div>
+          <span class="card__plane fas fa-plane"></span>
+          <div class="card__content">
+            <ul class="card__lists">
+              <li class="card__list card__list-price">۴۹۰.۰۰۰</li>
+              <li class="card__list card__list-">کاملا ریسپانسیو</li>
+              <li class="card__list card__list-">ویژگی های نامحدود</li>
+              <li class="card__list card__list-">بروزرسانی برای کاربران</li>
+              <li class="card__list card__list-">پشتیبانی رایگان</li>
+            </ul>
+          </div>
+          <a href="#" class="btn btn__shape btn__shape--orange card__link">
+            خرید این دوره
+          </a>
+        </div>
+
+        <div class="card">
+          <div class="card__header card__header--blue">
+            <div class="card__clouds card__clouds--rocket">
+              <i class="fas fa-cloud"></i>
+              <i class="fas fa-cloud"></i>
+              <i class="fas fa-cloud"></i>
+            </div>
+          </div>
+          <div class="card__plan-box">
+            <h4 class="card__plan-title">اشتراک سالانه</h4>
+          </div>
+          <span class="card__rocket fas fa-rocket"></span>
+          <div class="card__content">
+            <ul class="card__lists">
+              <li class="card__list card__list-price">۹۰۰.۰۰۰</li>
+              <li class="card__list card__list-">کاملا ریسپانسیو</li>
+              <li class="card__list card__list-">ویژگی های نامحدود</li>
+              <li class="card__list card__list-">بروزرسانی برای کاربران</li>
+              <li class="card__list card__list-">پشتیبانی رایگان</li>
+            </ul>
+          </div>
+          <a href="#" class="btn btn__shape btn__shape--blue card__link">
+            خرید این دوره
+          </a>
+        </div>
+
+        <div class="card">
+          <div class="card__header card__header--pink">
+            <div class="card__clouds card__clouds--paper-plane">
+              <i class="fas fa-cloud"></i>
+              <i class="fas fa-cloud"></i>
+              <i class="fas fa-cloud"></i>
+            </div>
+          </div>
+          <div class="card__plan-box">
+            <h4 class="card__plan-title">اشتراک هفتگی</h4>
+          </div>
+          <span class="card__paper-plane fas fa-paper-plane"></span>
+          <div class="card__content">
+            <ul class="card__lists">
+              <li class="card__list card__list-price">۲۹۰.۰۰۰</li>
+              <li class="card__list card__list-">کاملا ریسپانسیو</li>
+              <li class="card__list card__list-">ویژگی های نامحدود</li>
+              <li class="card__list card__list-">بروزرسانی برای کاربران</li>
+              <li class="card__list card__list-">پشتیبانی رایگان</li>
+            </ul>
+          </div>
+          <a href="#" class="btn btn__shape btn__shape--purple card__link">
+            خرید این دوره
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Planes section end -->
+
+    <!-- about FAQ section start -->
+
+    <div class="about">
+      <h1>درباره ما</h1>
+      <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+      <div class="container">
+        <div class="about__boxes">
+          <div class="about__video-box">
+            <div class="video">
+              <a href="#" class="ripple-play-btn">
+                <i class="fas fa-play"></i>
+              </a>
+
+              <video class="video__video-bg" autoplay loop muted>
+                <source type="video/mp4" src="videos/programming.mp4" />
+                <source type="video/webm" src="videos/programming-1.webm" />
+              </video>
+
+              <svg
+                class="video__svg"
+                width="500px"
+                height="500px"
+                viewBox="0 0 500 500"
+              >
+                <mask id="masking">
+                  <rect
+                    x="0"
+                    y="0"
+                    fill="white"
+                    width="100%"
+                    height="100%"
+                  ></rect>
+                  <path
+                    fill="black"
+                    class="st2"
+                    d="M103.1,70.2c-10.2,11.7-17.8,25.9-21.2,42.3c-8.5,40.6,10.9,81.9,3.4,123.1c-5.7,31.7-15.2,62.6-27.1,92.5
+c-10.8,27.1-26.4,56.4-20,86.5c6.3,29.4,31.1,45.2,56.5,49.1c16.1,2.4,33.5-0.6,49.5-2.3c18.4-2,36.8-4.7,55.1-7.8
+c23.8-4,47.5-8.7,71.1-14.1c4.6-1,9.2-2.1,13.8-3.2c31.3-7.4,63.6-16.4,90.4-36.8c58.9-44.7,92.1-117.8,89.6-191.4
+c-1.2-36.3-11.9-73.8-37.2-99.9c-16-16.5-36.9-27.6-58.7-34.9c-26.2-8.8-54.2-13.2-81-19.5c-30.1-7.1-60.4-13.1-90.9-18.1
+C163.5,30.3,126.5,43.5,103.1,70.2z"
+                  ></path>
+                </mask>
+
+                <rect
+                  mask="url(#masking)"
+                  fill="#fffaf3"
+                  width="500px"
+                  height="500px"
+                  overflow=" hidden"
+                ></rect>
+
+                <path
+                  mask="url(#masking)"
+                  fill="#fffaf3"
+                  class="video__st1"
+                  d="M88.3,52.4c-14.8,17-24.4,38-24.9,60.6c-0.4,15.3,2.3,30.5,4,45.6c3.2,27.1,3.7,54.7-0.3,81.7
+c-4,26.6-13.7,52.2-21.7,77.8C34.6,353,9.2,392,17.3,430.2c6.9,32.3,34.1,49.6,61.8,53.9c17.6,2.7,36.6-0.6,54.2-2.5
+c20.2-2.2,40.2-5.2,60.3-8.6c31.1-5.3,62.1-11.6,92.9-18.9c34.3-8.2,69.6-18,98.9-40.4c73.1-55.7,108.4-156.8,90.9-246.3
+c-6-30.6-20.1-60.4-43.7-80.9c-20.6-17.9-46.9-27.8-73.3-34.7c-55.8-14.6-112-27.9-169-37.2C154.4,8.6,113.8,23.1,88.3,52.4z"
+                ></path>
+
+                <circle class="video__st0" cx="38" cy="38" r="30.3"></circle>
+              </svg>
+            </div>
+          </div>
+          <div class="about__accordion-box">
+            <div class="accordion__tab">
+              <input
+                class="accordion__radio"
+                type="radio"
+                id="radio-1"
+                checked
+                name="radio-btn"
+              />
+              <label class="accordion__label" for="radio-1">
+                <div class="accordion__top">
+                  <span>آیا این قالب ویژگی ریسپانسیو دارد؟ 💻</span>
+                  <i class="fas fa-caret-up"></i>
+                </div>
+                <div class="accordion__bottom">
+                  <p class="accordion__text">
+                    این قالب ریسپانسیو بوده و با ویژگی Flex ریسپانسیو شده است
+                  </p>
+                  <i class="accordion__icon material-icons">devices</i>
+                </div>
+              </label>
+            </div>
+            <div class="accordion__tab">
+              <input
+                class="accordion__radio"
+                type="radio"
+                id="radio-2"
+                name="radio-btn"
+              />
+              <label class="accordion__label" for="radio-2">
+                <div class="accordion__top">
+                  <span>آیا قالب قابل ارتقا است؟ ⌚</span>
+                  <i class="fas fa-caret-up"></i>
+                </div>
+                <div class="accordion__bottom">
+                  <p class="accordion__text">
+                    از آنجایی که برای پیاده سازی قالب از Sass استفاده شده و کلین
+                    کد رعایت شده بله قابل ارتقا است
+                  </p>
+                  <i class="accordion__icon material-icons">update</i>
+                </div>
+              </label>
+            </div>
+            <div class="accordion__tab">
+              <input
+                class="accordion__radio"
+                type="radio"
+                id="radio-3"
+                name="radio-btn"
+              />
+              <label class="accordion__label" for="radio-3">
+                <div class="accordion__top">
+                  <span>آیا کد های این پروژه استاندارد است؟ 🔥</span>
+                  <i class="fas fa-caret-up"></i>
+                </div>
+                <div class="accordion__bottom">
+                  <p class="accordion__text">
+                    سعی شده تا حد امکان از کدنویسی استاندارد و دسته بندی
+                    استاندار کد ها استفاده شود
+                  </p>
+                  <i class="accordion__icon material-icons">code</i>
+                </div>
+              </label>
+            </div>
+            <div class="accordion__tab">
+              <input
+                class="accordion__radio"
+                type="radio"
+                id="radio-4"
+                name="radio-btn"
+              />
+              <label class="accordion__label" for="radio-4">
+                <div class="accordion__top">
+                  <span>
+                    از چه آیکن و فونت هایی در این پروژه استفاده شده است؟ ✨
+                  </span>
+                  <i class="fas fa-caret-up"></i>
+                </div>
+                <div class="accordion__bottom">
+                  <p class="accordion__text">
+                    در این پروژه از فونت فارسی وزیر استفاده شده و از Material
+                    Icon Fontawesome Flaticon برای آیکن ها استفاده شده
+                  </p>
+                  <i class="accordion__icon material-icons"
+                    >text_rotation_angledown</i
+                  >
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- about FAQ section end -->
+  </body>
+</html>

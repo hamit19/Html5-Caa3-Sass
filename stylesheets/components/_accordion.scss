@@ -1,0 +1,76 @@
+.accordion {
+  height: 40rem;
+  margin: 1rem;
+  &__top {
+    @include flex($justify-content: space-between);
+    padding: 2rem;
+    background-color: $color-gray1;
+    font-weight: bold;
+    border: 1px solid $color-gray2;
+    border-radius: 0.3rem;
+    user-select: none;
+    color: #333;
+    cursor: pointer;
+
+    & > i {
+      transition: all 0.3s ease;
+    }
+  }
+  &__bottom {
+    @include flex($align-items: center);
+    height: 0;
+    overflow: hidden;
+  }
+  &__text {
+    position: relative;
+    width: 90%;
+    text-align: justify;
+    color: $color-gray3;
+    padding: 1.5rem;
+  }
+  &__icon {
+    position: relative;
+    left: -80px;
+    width: 10%;
+    font-size: 4.5rem;
+    opacity: 0.4;
+  }
+  &__radio {
+    @extend %fade-out;
+
+    &:checked {
+      + .accordion__label > .accordion__top {
+        & > i {
+          transform: rotate(180deg);
+        }
+      }
+
+      + .accordion__label .accordion__bottom {
+        height: 10rem;
+        transition: height 0.6s cubic-bezier(0.65, 0.02, 0.38, 0.98);
+      }
+      + .accordion__label .accordion__text {
+        animation: accordion-icon-move-in 0.6s
+          cubic-bezier(0.65, 0.02, 0.38, 0.98) forwards;
+      }
+      + .accordion__label .accordion__icon {
+        left: 0;
+        transition: left 0.6s 0.5s cubic-bezier(0.65, 0.02, 0.38, 0.98);
+      }
+    }
+    &:not(checked) {
+      + .accordion__label .accordion__bottom {
+        height: 0;
+        transition: height 0.6s 0.3s cubic-bezier(0.65, 0.02, 0.38, 0.98);
+      }
+      + .accordion__label .accordion__text {
+        animation: accordion-icon-move-out 0.6s 0.3s
+          cubic-bezier(0.65, 0.02, 0.38, 0.98) forwards;
+      }
+      + .accordion__label .accordion__icon {
+        left: -80px;
+        transition: left 0.6s 0.3s cubic-bezier(0.65, 0.02, 0.38, 0.98);
+      }
+    }
+  }
+}

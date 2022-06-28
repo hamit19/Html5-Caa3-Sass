@@ -1,0 +1,86 @@
+.btn {
+  position: relative;
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0 0 3px $color-gray2;
+  border: none;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background-color: $color-orange2;
+  & > span {
+    position: relative;
+    z-index: 1;
+  }
+  &__swipe {
+    color: $color-white;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: $color-orange3;
+      border-radius: 0.5rem;
+      transform: scale(0, 1);
+      transition: all 0.4s ease;
+    }
+    &:hover {
+      color: $color-white;
+      &::after {
+        transform: scale(1, 1);
+      }
+    }
+  }
+
+  &__shape {
+    color: $color-white;
+    padding: 1.2rem 2rem 1.2rem 4rem;
+    &--purple {
+      background-color: $color-purple1;
+    }
+    &--blue {
+      background-color: $color-blue3;
+    }
+    &--orange {
+      background-color: $color-orange1;
+    }
+
+    &::before {
+      content: "\f3c1";
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      font-size: 2rem;
+      transform: rotateY(-0.5turn);
+      transition: all 0.3s linear;
+      opacity: 0;
+    }
+
+    &::after {
+      content: "\f023";
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      font-size: 2rem;
+      opacity: 1;
+      transition: all 0.3s linear;
+    }
+
+    &:hover {
+      color: $color-gray1;
+      &::after {
+        transform: rotateY(0.5turn);
+        opacity: 0;
+      }
+      &::before {
+        transform: rotateY(0);
+        opacity: 1;
+      }
+    }
+  }
+}

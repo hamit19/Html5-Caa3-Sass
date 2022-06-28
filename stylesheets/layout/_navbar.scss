@@ -1,0 +1,28 @@
+.navbar {
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  z-index: 30;
+  @media only screen and (max-width: 768px) {
+    position: sticky;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 10px #4444;
+    background-color: $color-white;
+  }
+  &__search-box {
+    width: 20rem;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .navbar__search-box {
+    order: 1;
+    width: auto;
+  }
+  .navbar__logo {
+    order: 2;
+  }
+}

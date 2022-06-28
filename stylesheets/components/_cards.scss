@@ -1,0 +1,175 @@
+.card {
+  position: relative;
+  overflow: hidden;
+  width: 30rem;
+  @include flex-centering(column);
+  background-color: $color-white;
+  box-shadow: -5px 5px 15px 1px rgba($color-gray3, 0.3);
+  border-radius: 1rem;
+  &:nth-child(2) {
+    margin: 0 1.5rem;
+  }
+  @media only screen and (max-width: 992px) {
+    &:nth-child(2) {
+      margin: 1.5rem 0;
+    }
+  }
+
+  &__header {
+    width: 100%;
+    height: 15rem;
+    &--pink {
+      @include bg-gradient($pink-gradient);
+    }
+    &--blue {
+      @include bg-gradient($blue-gradient);
+    }
+    &--orange {
+      @include bg-gradient($orange-gradient);
+    }
+  }
+
+  &__clouds {
+    position: relative;
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+    & > * {
+      position: absolute;
+      color: $color-white;
+    }
+    & :nth-of-type(1) {
+      top: 38%;
+      left: 10%;
+      font-size: 7rem;
+      opacity: 0.8;
+    }
+    & :nth-of-type(2) {
+      top: 45%;
+      left: 77%;
+      font-size: 4rem;
+      opacity: 0.6;
+    }
+    & :nth-of-type(3) {
+      top: 10%;
+      left: 50%;
+      font-size: 3rem;
+      opacity: 0.3;
+    }
+  }
+
+  &__plan-box {
+    position: absolute;
+    top: 9rem;
+    overflow: hidden;
+    z-index: 1;
+    @include flex-centering;
+    text-align: center;
+    width: 7rem;
+    height: 7rem;
+    border: 0.3rem solid $color-gray1;
+    background-color: $color-white;
+    border-radius: 50%;
+  }
+  &__content {
+    @include flex-centering;
+    width: 100%;
+    margin-top: -3rem;
+    border-top: 4px solid $color-gray1;
+    border-bottom: 1px solid $color-gray1;
+    background-color: $color-white;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+  }
+
+  &__lists {
+    margin: 0 6rem;
+    @include flex(
+      $justify-content: space-around,
+      $align-items: center,
+      $flex-direction: column
+    );
+    opacity: 0.7;
+  }
+  &__list {
+    width: 100%;
+    padding: 1rem;
+    border-bottom: 1px solid $color-gray2;
+    &:last-child {
+      border-bottom: 0;
+    }
+    &-price {
+      font-size: 3rem;
+      margin: 4rem 0 0 0;
+      border: 2px solid rgba($color-gray3, 0.4);
+      border-radius: 0.5rem;
+      background-color: rgba($color-gray2, 0.4);
+      text-shadow: 2px 1px 4px $color-gray2;
+    }
+  }
+  &__link {
+    margin: 2rem;
+  }
+
+  &__plane {
+    position: absolute;
+    top: 11rem;
+    right: 44%;
+    z-index: 2;
+    font-size: 3rem;
+    color: $color-blue3;
+    transform: rotate3d(0, 0, 1, -90deg);
+    opacity: 0;
+  }
+
+  &__rocket {
+    position: absolute;
+    top: 11rem;
+    right: 45%;
+    z-index: 2;
+    font-size: 3rem;
+    color: $color-blue3;
+    transform: rotate3d(0, 0, 1, -45deg);
+    opacity: 0;
+  }
+
+  &__paper-plane {
+    position: absolute;
+    top: 11rem;
+    right: 45%;
+    z-index: 2;
+    font-size: 3rem;
+    color: $color-blue3;
+    opacity: 0;
+  }
+
+  &:hover {
+    & .card__plan-title {
+      animation: fade-out 0.3s ease forwards, fade-in 0.3s ease 2.3s forwards;
+    }
+    & .card__plane {
+      opacity: 1;
+      animation: plane-flying 2s ease 0.3s forwards;
+    }
+
+    & .card__clouds {
+      &--plane {
+        animation: clouds-move-right-to-left 1s ease alternate 3;
+      }
+      &--rocket {
+        animation: clouds-to-bottom 1s 0.5s linear infinite;
+      }
+    }
+
+    & .card__rocket {
+      opacity: 1;
+      animation: rocket-launch 0.5s ease-out 0.8s forwards,
+        rocket-transfer 1s linear 1.3s alternate infinite;
+    }
+
+    & .card__paper-plane {
+      opacity: 1;
+      animation: paper-plane-out 2s 1s ease-out forwards;
+    }
+  }
+}

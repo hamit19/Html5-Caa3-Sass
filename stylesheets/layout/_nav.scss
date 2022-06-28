@@ -1,0 +1,312 @@
+.navbar__nav {
+  flex-grow: 1;
+  @media only screen and (max-width: 992px) {
+    flex-grow: 0;
+  }
+}
+
+#humberger-menu {
+  display: none;
+}
+
+.nav {
+  &__burger {
+    &-label {
+      width: 5rem;
+      height: 5rem;
+      @include flex($justify-content: space-evenly, $flex-direction: column);
+      @media only screen and (min-width: 769px) {
+        display: none;
+      }
+    }
+    &-label {
+      & > span {
+        height: 0.5rem;
+        border-radius: 0.5rem;
+        background-color: $color-blue2;
+        transition: all 0.3s $cubic-bezier;
+        &:nth-child(2) {
+          width: 100%;
+        }
+        animation: background-color 2s ease infinite alternate;
+      }
+      & :nth-child(1) {
+        width: 80%;
+      }
+      & :nth-child(3) {
+        width: 60%;
+      }
+    }
+  }
+
+  &__lists {
+    position: relative;
+    z-index: 30;
+    @include flex($justify-content: center);
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__submenu1,
+  &__submenu2 {
+    position: absolute;
+    width: 20rem;
+    background-color: #fff;
+    border-top: 0.3rem solid $color-orange1;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 1rem #dcdcdc;
+    transform-origin: top right;
+    transition: all 0.3s ease;
+    transform: scale(0);
+  }
+
+  &__list:hover ul.nav__submenu1 {
+    transform: scale(1);
+  }
+
+  &__list:hover > ul.nav__submenu2 {
+    transform: scale(1);
+  }
+
+  &__submenu1 {
+    & a:hover {
+      color: $color-blue1;
+      background-color: $color-gray1;
+      padding-right: 1.5rem;
+    }
+  }
+
+  &__submenu1 {
+    & a {
+      @include flex($align-items: center);
+      padding: 1rem;
+      color: #333;
+      transition: all 0.3s ease;
+    }
+  }
+  &__submenu2 {
+    top: 0;
+    right: 100%;
+  }
+
+  &__submenu1 {
+    .nav__list i {
+      margin-left: 1rem;
+    }
+
+    .sublist1 {
+      position: relative;
+    }
+
+    .sublist1 {
+      & > a i:last-child {
+        margin-right: auto;
+      }
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    padding: 1.3rem;
+    color: $color-blue1;
+    transition: color 0.6s ease;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0%;
+      height: 0.3rem;
+      background-color: $color-blue1;
+      border-radius: 0.5rem;
+      transform: translateX(-50%);
+      transition: all 0.3s ease;
+    }
+    &:hover::after {
+      width: 100%;
+    }
+
+    &:hover {
+      color: $color-brwon1;
+      & > .nav__arrow {
+        transform: rotate(225deg);
+      }
+    }
+  }
+  &__arrow {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 0.7rem;
+    height: 0.7rem;
+    border: 1px solid $color-brwon1;
+    border-width: 0 1px 1px 0;
+    transform: rotate(45deg);
+    transition: all 0.6s ease;
+  }
+}
+
+.mega__menu {
+  position: static;
+  &-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    @include flex($justify-content: space-evenly, $align-items: center);
+    padding: 1rem;
+    white-space: nowrap;
+    background-image: conic-gradient(#98d6f3, #fea2b1, #f7f1fa, #98d6f3);
+    border-top: 0.3rem solid $color-orange1;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 1rem #dcdcdc;
+    transform-origin: top right;
+    transition: all 0.5s ease;
+    transform: scale(1, 0);
+
+    @media only screen and (min-width: 768px) and (max-width: 1200px) {
+      width: 67rem;
+    }
+  }
+  &:hover {
+    & > .mega__menu-content {
+      transform: scale(1, 1);
+    }
+  }
+
+  &-colum {
+    @include flex(
+      $justify-content: center,
+      $flex-direction: column,
+      $align-items: center
+    );
+    & .mega__menu-lists {
+      @include flex-centering(column);
+      & li {
+        & a {
+          @include flex-centering;
+          padding: 1rem;
+          & i {
+            padding-left: 1rem;
+            transition: all 0.2s ease;
+          }
+          &:hover {
+            & > i {
+              color: #444;
+              transform: rotate(1turn);
+            }
+          }
+        }
+      }
+    }
+
+    & > h4 {
+      padding: 2rem;
+      border-bottom: 0.3rem solid $color-orange1;
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.show-large {
+  @media only screen and (min-width: 769px) {
+    display: block;
+  }
+}
+.show-small {
+  @media only screen and (max-width: 768px) {
+    display: block;
+  }
+}
+
+/* mobile responsive start  */
+
+@media only screen and (max-width: 768px) {
+  .nav__lists {
+    display: block;
+  }
+
+  .nav__mobile-wrap {
+    position: fixed;
+    top: 10.1rem;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: none;
+    width: 100%;
+    height: auto;
+    background-color: $color-blue4;
+    transition: all 0.3s ease;
+  }
+
+  .nav__burger-checkbox:checked {
+    & ~ .nav__mobile-wrap {
+      display: block;
+    }
+
+    & ~ .nav__burger-label :nth-child(1) {
+      width: 50%;
+      transform-origin: bottom;
+      transform: rotate(45deg) translate(-1.2rem, 1.8rem);
+    }
+
+    & ~ .nav__burger-label > span:nth-child(2) {
+      transform: rotate(-45deg);
+    }
+
+    & ~ .nav__burger-label :nth-child(3) {
+      width: 50%;
+      transform: rotatez(45deg) translate(-0.5rem, -0.2rem);
+    }
+  }
+
+  .nav__lists .nav__list:not(:last-child) {
+    border-bottom: 1px solid #c4c4c4;
+  }
+
+  .nav__lists .nav__list:hover a {
+    border-bottom: none;
+  }
+
+  .nav__link {
+    width: calc(100% - 3rem);
+  }
+  .nav__submenu1,
+  .nav__submenu2,
+  .mega__menu-content {
+    position: relative;
+    right: 0;
+    width: 100%;
+    border: none;
+    background: none;
+    box-shadow: none;
+    transform: scale(1);
+    display: none;
+  }
+
+  .nav__list:hover > .nav__submenu1,
+  .sublist1:hover > .nav__submenu2,
+  .mega__menu:hover .mega__menu-content {
+    display: block;
+  }
+
+  .nav__lists .nav__list {
+    margin-right: 2rem;
+  }
+
+  .mega__menu-content {
+    flex-direction: column;
+  }
+
+  .mega__menu-content .mega__menu-colum {
+    align-items: center;
+  }
+}
+
+/* mobile responsive end */

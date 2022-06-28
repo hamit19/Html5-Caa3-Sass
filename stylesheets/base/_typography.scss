@@ -1,0 +1,62 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $color-gray3;
+}
+
+.header-intro {
+  display: inline-block;
+  font-size: 4rem;
+  font-weight: bold;
+  width: 0%;
+  background-image: linear-gradient(
+    110deg,
+    #76e650,
+    13%,
+    #f9d649 15.22%,
+    #f08e35 30.96%,
+    #ff18bd 67.94%,
+    #1a4bff 85.34%
+  );
+  white-space: nowrap;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  border-left: 1.5rem solid $color-blue1;
+
+  animation: typewriting 1.2s steps(18) 2s 1 forwards,
+    typewriting-cursor 1s steps(1) infinite;
+
+  @media only screen and (max-width: 992px) {
+    font-size: 3.5rem;
+  }
+}
+
+.header-subtitle {
+  font-size: 2rem;
+  color: $color-gray4;
+  @media only screen and (max-width: 992px) {
+    font-size: 1.5rem;
+  }
+}
+
+.header-title {
+  @include flex-centering;
+  flex-wrap: wrap;
+  margin: 1rem;
+  font-size: 3rem;
+  &::before,
+  &::after {
+    content: "";
+    width: 20rem;
+    height: 2px;
+    background-color: $color-orange1;
+    margin: 0 1rem;
+    @media only screen and (max-width: 768px) {
+      width: 100%;
+    }
+  }
+}

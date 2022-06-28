@@ -1,0 +1,7 @@
+@function image($iamgeUrl) {
+  @return url($path-base + "images/" + $iamgeUrl);
+}
+
+@function font($fontUrl) {
+  @return url($path-base + "fonts/" + $fontUrl);
+}
