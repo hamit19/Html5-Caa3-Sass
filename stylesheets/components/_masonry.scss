@@ -1,0 +1,199 @@
+.masonry {
+  @include flex(
+    $justify-content: center,
+    $align-items: center,
+    $flex-direction: column
+  );
+
+  &__box {
+    columns: 4;
+    column-gap: 2rem;
+    column-width: 30rem;
+
+    & > * {
+      transition: all 0.3s ease;
+    }
+
+    &:hover > * {
+      filter: blur(2px) brightness(70%);
+    }
+  }
+
+  &__item {
+    overflow: hidden;
+    position: relative;
+    margin: auto auto 1rem auto;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: block;
+      z-index: 1;
+      background: linear-gradient(
+        to bottom,
+        rgba(62, 62, 62, 0) 0%,
+        rgba(62, 62, 62, 0.1) 20%,
+        rgba(62, 62, 62, 0.7) 70%,
+        rgba(62, 62, 62, 1) 100%
+      );
+      transform: translateY(60%);
+      transition: all 0.3s ease;
+    }
+
+    &:hover {
+      filter: none;
+      &::before {
+        transform: translateY(0%);
+      }
+
+      .masonry__overlay {
+        transform: translateY(10%);
+        i,
+        p {
+          opacity: 1;
+        }
+      }
+
+      .masonry__img {
+        transform: translate3d(0, 0, 0);
+      }
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    @include flex(
+      $justify-content: space-evenly,
+      $align-items: center,
+      $flex-direction: column
+    );
+    padding: 0.5rem 1rem;
+    transform: translateY(70%);
+    transition: all 0.3s cubic-bezier(0.72, 0.36, 0.19, 0.77);
+
+    h3,
+    p,
+    i {
+      color: $color-gray1;
+    }
+
+    p,
+    i {
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+
+    i {
+      font-size: 3.5rem;
+      &:hover {
+        color: $color-green2;
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  &__img {
+    width: calc(100% + 2rem);
+    transform: translate3d(2rem, 0, 0);
+    display: block;
+    transition: all 0.3s ease;
+  }
+  &__input {
+    @extend %fade-out;
+  }
+
+  & > input[id="all"]:checked ~ .tabs > label[for="all"] > h3,
+  & > input[id="css"]:checked ~ .tabs > label[for="css"] > h3,
+  & > input[id="php"]:checked ~ .tabs > label[for="php"] > h3,
+  & > input[id="java"]:checked ~ .tabs > label[for="java"] > h3 {
+    color: $color-white;
+  }
+
+  & > input[id="all"]:checked ~ .tabs .tabs__label-bg {
+    transform: translate3d(-3px, 0, 0);
+    @media only screen and (max-width: 576px) {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  & > input[id="css"]:checked ~ .tabs .tabs__label-bg {
+    transform: translate3d(-12rem, 0, 0);
+    @media only screen and (max-width: 576px) {
+      transform: translate3d(0, 5rem, 0);
+    }
+  }
+  & > input[id="php"]:checked ~ .tabs .tabs__label-bg {
+    transform: translate3d(-24rem, 0, 0);
+    @media only screen and (max-width: 576px) {
+      transform: translate3d(0, 10rem, 0);
+    }
+  }
+  & > input[id="java"]:checked ~ .tabs .tabs__label-bg {
+    transform: translate3d(-35.5rem, 0, 0);
+    @media only screen and (max-width: 576px) {
+      transform: translate3d(0, 15rem, 0);
+    }
+  }
+
+  &
+    > input[id="css"]:checked
+    ~ .masonry__box
+    > .masonry__item:not([data-lang~="css"]),
+  &
+    > input[id="php"]:checked
+    ~ .masonry__box
+    > .masonry__item:not([data-lang~="php"]),
+  &
+    > input[id="java"]:checked
+    ~ .masonry__box
+    > .masonry__item:not([data-lang~="java"]) {
+    @extend %fade-out;
+  }
+}
+
+.tabs {
+  position: relative;
+  @include flex($justify-content: center, $align-items: center);
+  background-color: rgba(80, 91, 105, 0.5);
+  border-radius: 2rem;
+  margin: 4rem;
+  @media only screen and (max-width: 576px) {
+    flex-direction: column;
+    height: 20rem;
+  }
+  & > label {
+    position: relative;
+    width: 12rem;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 1.6rem;
+    color: $color-gray5;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  &__label-bg {
+    position: absolute;
+    right: 0;
+    @include flex($justify-content: center, $align-items: center);
+    width: 12rem;
+    height: 4rem;
+    background-color: $color-gray5;
+    border-radius: 2rem;
+    transition: all 0.3s ease;
+    @media only screen and (max-width: 576px) {
+      top: 0;
+      height: 5rem;
+    }
+  }
+}
