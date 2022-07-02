@@ -1,9 +1,15 @@
 .accordion__radio, .masonry__input, .masonry > input[id="css"]:checked ~ .masonry__box > .masonry__item:not([data-lang~="css"]),
 .masonry > input[id="php"]:checked ~ .masonry__box > .masonry__item:not([data-lang~="php"]),
-.masonry > input[id="java"]:checked ~ .masonry__box > .masonry__item:not([data-lang~="java"]) {
+.masonry > input[id="java"]:checked ~ .masonry__box > .masonry__item:not([data-lang~="java"]), .modal {
   display: none;
   visibility: hidden;
   opacity: 0;
+}
+
+.modal:target {
+  display: block;
+  visibility: visible;
+  opacity: 1;
 }
 
 *,
@@ -1815,6 +1821,66 @@ h6 {
     top: 0;
     height: 5rem;
   }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal__content {
+  position: relative;
+  margin: 10rem auto 0 auto;
+  max-width: 35rem;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+@media only screen and (max-width: 576px) {
+  .modal__content {
+    max-width: 80%;
+    margin: 15rem auto 0 auto;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .modal__content {
+    max-width: 70%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .modal__content {
+    max-width: 60%;
+  }
+}
+
+.modal__img {
+  max-width: 100%;
+  border-radius: 0.5rem;
+}
+
+.modal__close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #f15a24;
+}
+
+.modal__text {
+  padding: 0.3rem;
+  color: #3c4858;
+  font-size: 1.3rem;
 }
 
 .navbar__nav {

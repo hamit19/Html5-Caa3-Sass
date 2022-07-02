@@ -1,0 +1,54 @@
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.5);
+  @extend %fade-out;
+
+  &:target {
+    @extend %fade-in;
+  }
+
+  &__content {
+    position: relative;
+    margin: 10rem auto 0 auto;
+    max-width: 35rem;
+    background-color: $color-white;
+    @include flex-centering(column);
+    padding: 1rem;
+    border-radius: 0.5rem;
+
+    @media only screen and (max-width: 576px) {
+      max-width: 80%;
+      margin: 15rem auto 0 auto;
+    }
+
+    @media only screen and (max-width: 768px) {
+      max-width: 70%;
+    }
+    @media only screen and (max-width: 992px) {
+      max-width: 60%;
+    }
+  }
+
+  &__img {
+    max-width: 100%;
+    border-radius: 0.5rem;
+  }
+
+  &__close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: $color-red1;
+  }
+
+  &__text {
+    padding: 0.3rem;
+    color: $color-gray5;
+    font-size: 1.3rem;
+  }
+}
