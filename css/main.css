@@ -57,7 +57,6 @@ a:hover {
   src: url("../fonts/fonts/woff2/Vazir-Thin.woff2") format(woff2);
 }
 
-/*  flex helper start   */
 .flex {
   display: flex;
 }
@@ -82,8 +81,6 @@ a:hover {
   align-items: center;
 }
 
-/*  flex helper end   */
-/* padding and margin helper start */
 .m-t10 {
   margin-top: 1rem;
 }
@@ -124,14 +121,12 @@ a:hover {
   padding-bottom: 1rem;
 }
 
-/* padding and margin helper end */
 .container {
   width: 100%;
   margin: 0 auto;
   padding: 0 1rem;
 }
 
-/* container responsive start */
 @media only screen and (min-width: 576px) {
   .container {
     max-width: 540px;
@@ -162,7 +157,10 @@ a:hover {
   }
 }
 
-/* container responsive end */
+.white {
+  color: white;
+}
+
 h1,
 h2,
 h3,
@@ -2138,6 +2136,105 @@ h6 {
   background-image: repeating-linear-gradient(45deg, rgba(217, 123, 147, 0.4) 0, rgba(217, 123, 147, 0.4) 1px, transparent 0, transparent 50px), repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 0 1px, transparent 0 50px), linear-gradient(to bottom, #725fa5, #d97b93);
 }
 
+.flip {
+  width: 100%;
+  height: 26rem;
+  margin: 0 2rem;
+  -webkit-perspective: 999px;
+          perspective: 999px;
+}
+
+.flip__card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  transition: all 0.4s linear;
+}
+
+.flip:hover > .flip__card {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.flip__main-side, .flip__back-side {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 3rem;
+  border-radius: 1rem;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+@media only screen and (max-width: 576px) {
+  .flip__main-side, .flip__back-side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+.flip__main-side::after, .flip__back-side::after {
+  position: absolute;
+  bottom: 0;
+  left: 5rem;
+  font-size: 8rem;
+  color: #cccccc;
+  opacity: 0.3;
+  font-weight: 900;
+}
+
+@media only screen and (max-width: 576px) {
+  .flip__main-side::after, .flip__back-side::after {
+    opacity: 0;
+  }
+}
+
+.flip__main-side::after {
+  content: "\f10e";
+}
+
+.flip__back-side {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.flip__back-side::after {
+  content: "\f10d";
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.info__image {
+  width: 100px;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 576px) {
+  .info {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
 .navbar__nav {
   flex-grow: 1;
 }
@@ -2700,6 +2797,10 @@ h6 {
 
 .contact {
   position: relative;
+}
+
+.testimonials {
+  padding: 2rem 0;
 }
 
 .testimonials__boxes {

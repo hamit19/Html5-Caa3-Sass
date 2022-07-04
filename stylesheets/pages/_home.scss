@@ -78,6 +78,7 @@
 }
 
 .testimonials {
+  padding: 2rem 0;
   &__boxes {
     @include flex($justify-content: space-evenly, $align-items: center);
 

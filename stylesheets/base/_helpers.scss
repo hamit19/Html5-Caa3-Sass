@@ -1,4 +1,4 @@
-/*  flex helper start   */
+// flex helper start
 
 .flex {
   display: flex;
@@ -24,9 +24,9 @@
   align-items: center;
 }
 
-/*  flex helper end   */
+// flex helper end
 
-/* padding and margin helper start */
+//padding and margin helper start
 
 .m-t10 {
   margin-top: 1rem;
@@ -67,7 +67,7 @@
   padding-bottom: 1rem;
 }
 
-/* padding and margin helper end */
+//padding and margin helper end
 
 .container {
   width: 100%;
@@ -75,7 +75,7 @@
   padding: 0 1rem;
 }
 
-/* container responsive start */
+//container responsive start
 
 @media only screen and (min-width: 576px) {
   .container {
@@ -107,4 +107,9 @@
   }
 }
 
-/* container responsive end */
+//container responsive end
+
+// colors
+.white {
+  color: white;
+}

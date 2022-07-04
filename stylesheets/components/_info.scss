@@ -1,0 +1,17 @@
+.info {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  &__image {
+    width: 100px;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    @include flex-centering;
+  }
+
+  @media only screen and (max-width: 576px) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
