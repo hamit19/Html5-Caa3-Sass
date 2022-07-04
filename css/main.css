@@ -2134,6 +2134,10 @@ h6 {
   --opacity: 1;
 }
 
+.pattern {
+  background-image: repeating-linear-gradient(45deg, rgba(217, 123, 147, 0.4) 0, rgba(217, 123, 147, 0.4) 1px, transparent 0, transparent 50px), repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 0 1px, transparent 0 50px), linear-gradient(to bottom, #725fa5, #d97b93);
+}
+
 .navbar__nav {
   flex-grow: 1;
 }
@@ -2696,5 +2700,17 @@ h6 {
 
 .contact {
   position: relative;
+}
+
+.testimonials__boxes {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+@media only screen and (max-width: 992px) {
+  .testimonials__boxes {
+    flex-direction: column;
+  }
 }
 /*# sourceMappingURL=main.css.map */
