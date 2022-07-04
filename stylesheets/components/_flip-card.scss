@@ -4,6 +4,10 @@
   margin: 0 2rem;
   perspective: 999px;
 
+  @media only screen and (max-width: 992px) {
+    margin: 2rem auto;
+  }
+
   &__card {
     position: relative;
     width: 100%;

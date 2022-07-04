@@ -2144,6 +2144,12 @@ h6 {
           perspective: 999px;
 }
 
+@media only screen and (max-width: 992px) {
+  .flip {
+    margin: 2rem auto;
+  }
+}
+
 .flip__card {
   position: relative;
   width: 100%;
@@ -2233,6 +2239,46 @@ h6 {
     flex-direction: column;
     text-align: center;
   }
+}
+
+.skew {
+  position: relative;
+  width: 100%;
+  height: 26rem;
+  padding: 2rem;
+  margin: 0 2rem;
+}
+
+@media only screen and (max-width: 992px) {
+  .skew {
+    height: auto;
+    margin: 2rem auto;
+  }
+}
+
+.skew::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #fff;
+  border-radius: 1rem;
+  -webkit-transform: skew(4deg);
+          transform: skew(4deg);
+  transition: all 0.4s ease;
+}
+
+.skew:hover::before {
+  -webkit-transform: skew(-4deg);
+          transform: skew(-4deg);
+}
+
+.skew__wrap {
+  position: relative;
+  z-index: 2;
 }
 
 .navbar__nav {
@@ -2800,7 +2846,7 @@ h6 {
 }
 
 .testimonials {
-  padding: 2rem 0;
+  padding: 7rem 1rem;
 }
 
 .testimonials__boxes {

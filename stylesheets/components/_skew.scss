@@ -1,0 +1,34 @@
+.skew {
+  position: relative;
+  width: 100%;
+  height: 26rem;
+  padding: 2rem;
+  margin: 0 2rem;
+
+  @media only screen and (max-width: 992px) {
+    height: auto;
+    margin: 2rem auto;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background-color: $color-white;
+    border-radius: 1rem;
+    transform: skew(4deg);
+    transition: all 0.4s ease;
+  }
+  &:hover::before {
+    transform: skew(-4deg);
+  }
+
+  &__wrap {
+    position: relative;
+    z-index: 2;
+  }
+}
