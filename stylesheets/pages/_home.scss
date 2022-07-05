@@ -87,3 +87,35 @@
     }
   }
 }
+
+.footers {
+  position: relative;
+  background: image("footer-bg2.jpg") center no-repeat;
+  background-size: cover;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  &__copy-right {
+    position: relative;
+    z-index: 2;
+    @include flex-centering;
+    padding: 1rem 0;
+    & span {
+      color: $color-gray1;
+
+      a {
+        font-weight: bold;
+        &:hover {
+          color: $color-gray1;
+        }
+      }
+    }
+  }
+}
