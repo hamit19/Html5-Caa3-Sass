@@ -1146,7 +1146,7 @@ h6 {
 .course__tag::before {
   content: "";
   position: absolute;
-  top: 12px;
+  top: 13px;
   left: -0.7rem;
   width: 0.7rem;
   height: 0.7rem;
@@ -1387,6 +1387,7 @@ h6 {
   width: 100%;
   padding: 1rem;
   border-bottom: 1px solid #cccccc;
+  text-align: center;
 }
 
 .card__list:last-child {
@@ -1400,6 +1401,7 @@ h6 {
   border-radius: 0.5rem;
   background-color: rgba(204, 204, 204, 0.4);
   text-shadow: 2px 1px 4px #cccccc;
+  text-align: center;
 }
 
 .card__link {

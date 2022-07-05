@@ -95,6 +95,7 @@
     width: 100%;
     padding: 1rem;
     border-bottom: 1px solid $color-gray2;
+    text-align: center;
     &:last-child {
       border-bottom: 0;
     }
@@ -105,6 +106,7 @@
       border-radius: 0.5rem;
       background-color: rgba($color-gray2, 0.4);
       text-shadow: 2px 1px 4px $color-gray2;
+      text-align: center;
     }
   }
   &__link {
