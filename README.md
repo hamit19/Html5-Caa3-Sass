@@ -1,6 +1,6 @@
 # Html5-Css3-Sass
 
-<h2>checkout the template online: <a href="https://leafy-cendol-f6ede3.netlify.app" target="_blank"  >https://leafy-cendol-f6ede3.netlify.app</a> </h2>
+<h2>checkout the template online: https://leafy-cendol-f6ede3.netlify.app </h2>
 
 This is a practical project with HTML5 CSS3 and (SASS), The template has been implemented by me.
 
