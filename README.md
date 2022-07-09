@@ -8,4 +8,4 @@ General description of the template: This template have made up of 11 sections t
 
 HTML5 CSS3 and SASS have been used for implementing the template, also, the Flaticon, Font awesome, and Material icons have been used in the template and the Flex property has been used to have a responsive template.
 
-I hope this template indicates my skills in HTML5 CSS3 and Sass(scss).
+I hope this practical project can indicate my skills in HTML5, CSS3, and Sass(scss).
