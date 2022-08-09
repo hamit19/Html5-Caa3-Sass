@@ -3,7 +3,10 @@
 <h2>checkout the template online: <a href="https://html5css3scss.netlify.app/">Click here to redirect!</a> </h2>
 
 
-![Shopping Card - Google Chrome 8_1_2022 5_36_03 PM (2)-min](https://user-images.githubusercontent.com/96312176/182159295-17371bbe-d060-4e95-910a-17cf7ee7e3f0.png)
+![Shopping Card - Google Chrome 8_1_2022 5_36_03 PM (2)-min (2)](https://user-images.githubusercontent.com/96312176/183647795-c7e14548-1c65-4abd-b252-5bec0c6746b3.jpg)
+
+
+<hr>
 
 This is a practical project with HTML5 CSS3 and (SASS), The template has been implemented by me.
 
